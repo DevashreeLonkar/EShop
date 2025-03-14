@@ -22,10 +22,21 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import { CustomerComponent } from './customer/customer.component';
+import { AdminComponent } from './admin/admin.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    CustomerComponent,
+    SignupComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +60,8 @@ import { MatTableModule } from '@angular/material/table';
     MatRadioModule,
     MatDialogModule,
     MatTableModule,
-    
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
